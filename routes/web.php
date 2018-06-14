@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('/areas_practicas/configurar_areas_practicas','AreasPracticasController');
+Route::resource('/quienes/configurar_quienes','QuienesController');
+Route::resource('/noticia/configurar_noticia','NoticiaController');
+Route::resource('/prefesional/configurar_prefesional','PrefesionalController');
+Route::resource('/contacto/configurar_contacto','ContactoController');
