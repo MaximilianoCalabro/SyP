@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts/admin');
 });
 
 Route::resource('/areas_practicas/configurar_areas_practicas','AreasPracticasController');
