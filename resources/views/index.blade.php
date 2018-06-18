@@ -11,25 +11,25 @@
     <title>Santos &amp; Pierrot - Estudio Jurídico</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    <link href="assets/lib/animate.css/animate.css" rel="stylesheet">
-    <link href="assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
-    <link href="assets/lib/flexslider/flexslider.css" rel="stylesheet">
-    <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
-    <link href="assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
-    <link href="assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
+    <link href="{{asset('lib/animate.css/animate.css')}}" rel="stylesheet">
+    <link href="{{asset('lib/components-font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('lib/et-line-font/et-line-font.css')}}" rel="stylesheet">
+    <link href="{{asset('lib/flexslider/flexslider.css')}}" rel="stylesheet">
+    <link href="{{asset('lib/owl.carousel/dist/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{asset('lib/owl.carousel/dist/assets/owl.theme.default.min.css')}}" rel="stylesheet">
+    <link href="{{asset('lib/magnific-popup/dist/magnific-popup.css')}}" rel="stylesheet">
+    <link href="{{asset('lib/simple-text-rotator/simpletextrotator.css')}}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/business-casual.min.css" rel="stylesheet">
+    <link href="{{asset('css/business-casual.min.css')}}" rel="stylesheet">
 
   </head>
 
@@ -50,31 +50,29 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item active px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="index.html">Areas Prácticas<!-- 
+              <a class="nav-link text-uppercase text-expanded" href="/pagina/about">¿Quienes Somos?</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="/pagina/areas">Areas Prácticas</a><!-- 
                 <span class="sr-only">(current)</span> -->
-              </a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="about.html">¿Quienes Somos?</a>
+              <a class="nav-link text-uppercase text-expanded" href="/pagina/pros">Profesionales</a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="notice.html">Noticias</a>
+              <a class="nav-link text-uppercase text-expanded" href="/pagina/notice">Noticias</a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="pros.html">Profesionales</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="contact.html">Contactos</a>
+              <a class="nav-link text-uppercase text-expanded" href="/pagina/contact">Contactos</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-
-<!-- CONTENIDO -->
-    CONTENIDO
-<!-- CONTENIDO -->
+    <!-- CONTENIDO -->
+    @yield ('contenido')
+    <!-- FIN CONTENIDO -->
 
     <footer class="footer text-faded text-center py-5">
       <div class="container">
@@ -83,8 +81,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <!-- Script to highlight the active date in the hours list -->
     <script>
       $('.list-hours li').eq(new Date().getDay()).addClass('today');
